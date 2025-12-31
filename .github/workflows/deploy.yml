@@ -28,7 +28,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Initialize Submodules
+        run: |
+          git submodule update --init --recursive
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
