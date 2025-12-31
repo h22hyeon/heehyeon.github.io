@@ -19,7 +19,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -40,7 +40,7 @@
                 <p class="hero-subtitle">Exploring the frontiers of AI and deep learning</p>
                 <div class="hero-buttons">
                     <a href="#research" class="btn btn-primary">View Research</a>
-                    <a href="#blog" class="btn btn-secondary">Read Blog</a>
+                    <a href="#cv" class="btn btn-secondary">Download CV</a>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -142,12 +142,56 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="section section-alt">
+        <!-- CV Section -->
+        <section id="cv" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Blog</h2>
-                <div class="blog-grid" id="blogGrid">
-                    <!-- Blog posts will be loaded dynamically -->
+                <h2 class="section-title">Curriculum Vitae</h2>
+                <div class="cv-content">
+                    <div class="cv-download">
+                        <p class="cv-description">
+                            Download my latest CV for a detailed overview of my research, publications, and experience.
+                        </p>
+                        <a href="assets/cv.pdf" class="btn btn-primary" download>
+                            <span>Download CV</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 12L3 7L4.4 5.6L7 8.2V0H9V8.2L11.6 5.6L13 7L8 12Z" fill="currentColor"/>
+                                <path d="M14 14H2V16H14V14Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cv-preview">
+                        <div class="cv-item">
+                            <h3>Education</h3>
+                            <div class="cv-entry">
+                                <div class="cv-entry-header">
+                                    <h4>PhD in Machine Learning</h4>
+                                    <span class="cv-date">2020 - Present</span>
+                                </div>
+                                <p class="cv-institution">University Name</p>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <h3>Experience</h3>
+                            <div class="cv-entry">
+                                <div class="cv-entry-header">
+                                    <h4>Research Assistant</h4>
+                                    <span class="cv-date">2020 - Present</span>
+                                </div>
+                                <p class="cv-institution">Lab Name, University</p>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <h3>Skills</h3>
+                            <div class="cv-skills">
+                                <span class="cv-skill">Python</span>
+                                <span class="cv-skill">PyTorch</span>
+                                <span class="cv-skill">TensorFlow</span>
+                                <span class="cv-skill">Deep Learning</span>
+                                <span class="cv-skill">Computer Vision</span>
+                                <span class="cv-skill">NLP</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
