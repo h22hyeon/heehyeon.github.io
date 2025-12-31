@@ -34,21 +34,6 @@ author_profile: false
   </div>
 </section>
 
-<div class="mck-kpis">
-  <div class="mck-kpi">
-    <p class="v">X+</p>
-    <p class="l">Peer-reviewed papers</p>
-  </div>
-  <div class="mck-kpi">
-    <p class="v">Y</p>
-    <p class="l">Research themes</p>
-  </div>
-  <div class="mck-kpi">
-    <p class="v">Z</p>
-    <p class="l">Open-source repos</p>
-  </div>
-</div>
-
 ## Executive Summary
 - **What I do:** structure-aware learning and evaluation for modern ML systems.
 - **How I work:** clear hypotheses → controlled experiments → reproducible artifacts.
