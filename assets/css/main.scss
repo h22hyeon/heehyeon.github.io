@@ -43,8 +43,9 @@
   
   /* Glass Effects */
   --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --glass-bg-soft: rgba(5, 20, 40, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -374,13 +375,13 @@ body,
 
 /* Content Boxes */
 .content-box {
-  background: var(--glass-bg);
+  background: linear-gradient(135deg, rgba(5, 20, 40, 0.5) 0%, rgba(10, 30, 50, 0.4) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: var(--spacing-lg);
-  box-shadow: var(--glass-shadow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -398,8 +399,9 @@ body,
 
 .content-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-  border-color: var(--border-accent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(5, 20, 40, 0.55) 0%, rgba(10, 30, 50, 0.45) 100%);
 }
 
 .content-box-summary {
@@ -407,15 +409,17 @@ body,
 }
 
 .content-box-summary::before {
-  background: linear-gradient(90deg, var(--mck-accent) 0%, var(--mck-accent-light) 100%);
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.4), transparent);
+  opacity: 0.6;
 }
 
 .content-box-focus {
-  border-left: 4px solid rgba(0, 102, 204, 0.6);
+  border-left: 4px solid rgba(0, 102, 204, 0.5);
 }
 
 .content-box-focus::before {
-  background: linear-gradient(90deg, rgba(0, 102, 204, 0.6) 0%, rgba(0, 102, 204, 0.3) 100%);
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.3), transparent);
+  opacity: 0.5;
 }
 
 .content-box h2 {
@@ -447,15 +451,15 @@ body,
 
 .competency-item {
   padding: var(--spacing-md);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  border: 1px solid var(--border-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.2s ease;
 }
 
 .competency-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--border-primary);
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .competency-item strong {
@@ -485,15 +489,16 @@ body,
 
 .focus-item {
   padding: var(--spacing-md);
-  background: rgba(0, 102, 204, 0.05);
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   border-left: 3px solid var(--mck-accent);
   transition: all 0.2s ease;
 }
 
 .focus-item:hover {
-  background: rgba(0, 102, 204, 0.08);
+  background: rgba(0, 0, 0, 0.35);
   transform: translateX(4px);
+  border-left-color: var(--mck-accent-light);
 }
 
 .focus-item h3 {
