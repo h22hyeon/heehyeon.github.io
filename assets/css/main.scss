@@ -10,42 +10,39 @@
 @import "minimal-mistakes";
 
 /* =========================================================
-   McKinsey Design System
+   Modern McKinsey-Inspired Design System
    ========================================================= */
 :root {
-  /* Color Palette - McKinsey Blue & Professional Neutrals */
+  /* Color Palette - Refined & Lighter */
   --mck-primary: #0A2A66;
   --mck-primary-light: #1A3A76;
-  --mck-primary-dark: #051A46;
   --mck-accent: #0066CC;
-  --mck-accent-light: #3385D6;
+  --mck-accent-light: #4A9EFF;
+  --mck-accent-soft: rgba(0, 102, 204, 0.15);
   
-  /* Background Gradients */
+  /* Background - Lighter & More Refined */
   --mck-canvas:
-    radial-gradient(1400px 800px at 12% 25%, rgba(10, 42, 102, 0.25), transparent 60%),
-    radial-gradient(1000px 700px at 75% 40%, rgba(0, 102, 204, 0.15), transparent 55%),
-    linear-gradient(180deg, #0A1A2E 0%, #050E1A 100%);
-  
-  --mck-canvas-light:
-    radial-gradient(1200px 600px at 10% 20%, rgba(10, 42, 102, 0.12), transparent 50%),
+    radial-gradient(1200px 600px at 10% 20%, rgba(10, 42, 102, 0.08), transparent 50%),
+    radial-gradient(800px 500px at 85% 50%, rgba(0, 102, 204, 0.06), transparent 50%),
     linear-gradient(180deg, #0F1F35 0%, #0A1525 100%);
   
-  /* Text Colors */
-  --text-primary: rgba(255, 255, 255, 0.95);
-  --text-secondary: rgba(255, 255, 255, 0.75);
-  --text-tertiary: rgba(255, 255, 255, 0.55);
-  --text-muted: rgba(255, 255, 255, 0.45);
+  /* Text Colors - Softer */
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-secondary: rgba(255, 255, 255, 0.70);
+  --text-tertiary: rgba(255, 255, 255, 0.50);
+  --text-muted: rgba(255, 255, 255, 0.40);
   
-  /* Borders & Dividers */
-  --border-primary: rgba(255, 255, 255, 0.12);
-  --border-secondary: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(0, 102, 204, 0.3);
+  /* Borders - Subtle */
+  --border-primary: rgba(255, 255, 255, 0.10);
+  --border-secondary: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(0, 102, 204, 0.25);
   
-  /* Glass Effects */
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-bg-soft: rgba(5, 20, 40, 0.4);
+  /* Glass Effects - Lighter */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-bg-hover: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  --glass-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.2);
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -110,18 +107,18 @@ body,
 }
 
 /* =========================================================
-   Navigation (Masthead)
+   Navigation (Masthead) - Cleaner
    ========================================================= */
 .masthead {
-  background: linear-gradient(180deg, rgba(10, 26, 46, 0.95) 0%, rgba(5, 14, 26, 0.95) 100%) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-primary);
-  padding: 1rem 0;
+  background: rgba(10, 20, 35, 0.7) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-secondary);
+  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.1);
 }
 
 .masthead__inner-wrap {
@@ -146,19 +143,19 @@ body,
   letter-spacing: 0.01em;
   transition: all 0.2s ease;
   padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .greedy-nav a:hover {
   color: var(--text-primary) !important;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .greedy-nav .site-title {
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
   color: var(--text-primary) !important;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .greedy-nav .site-logo {
@@ -166,7 +163,7 @@ body,
 }
 
 /* =========================================================
-   Hero Section
+   Hero Section - Refined
    ========================================================= */
 .mck-hero {
   padding: var(--spacing-2xl) 0 var(--spacing-xl);
@@ -177,11 +174,11 @@ body,
 .mck-hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+  top: -30%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -209,31 +206,27 @@ body,
 
 /* Hero Typography */
 .mck-kicker {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-tertiary);
   margin-bottom: var(--spacing-sm);
   display: inline-block;
-  padding: 0.4rem 0.9rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
   border: 1px solid var(--border-secondary);
 }
 
 .mck-title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
   line-height: 1.15;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
   margin: var(--spacing-md) 0 var(--spacing-lg) 0;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .mck-sub {
@@ -245,28 +238,30 @@ body,
   font-weight: 400;
 }
 
-/* CTA Button */
+/* CTA Button - Softer */
 .mck-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
-  background: linear-gradient(135deg, var(--mck-accent) 0%, var(--mck-accent-light) 100%);
-  color: white !important;
+  padding: 0.75rem 1.5rem;
+  background: rgba(0, 102, 204, 0.15);
+  color: var(--mck-accent-light) !important;
   font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 6px;
+  font-size: 0.9rem;
+  border-radius: 8px;
   text-decoration: none !important;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0, 102, 204, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 102, 204, 0.25);
+  backdrop-filter: blur(10px);
 }
 
 .mck-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0, 102, 204, 0.4);
-  color: white !important;
+  background: rgba(0, 102, 204, 0.22);
+  border-color: rgba(0, 102, 204, 0.35);
+  transform: translateY(-1px);
+  color: var(--mck-accent-light) !important;
   text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
 }
 
 .mck-cta span {
@@ -274,14 +269,14 @@ body,
 }
 
 .mck-cta:hover span {
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
-/* Hero Card */
+/* Hero Card - Lighter */
 .mck-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: var(--spacing-lg);
@@ -297,18 +292,20 @@ body,
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--mck-accent) 0%, var(--mck-accent-light) 100%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--mck-accent-light), transparent);
+  opacity: 0.4;
 }
 
 .mck-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover);
   border-color: var(--border-accent);
+  background: var(--glass-bg-hover);
 }
 
 .mck-card-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -317,8 +314,8 @@ body,
 }
 
 .mck-card-title {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   line-height: 1.3;
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
@@ -334,7 +331,7 @@ body,
 
 .mck-card-link {
   color: var(--mck-accent-light) !important;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none !important;
   display: inline-flex;
@@ -349,12 +346,12 @@ body,
 }
 
 /* =========================================================
-   Content Sections
+   Content Sections - Clean & Modern
    ========================================================= */
 .page__content {
   background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: var(--spacing-xl) var(--spacing-lg);
@@ -364,24 +361,35 @@ body,
   position: relative;
 }
 
+.page__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+  opacity: 0.5;
+}
+
 /* Content Sections Container */
 .content-sections {
-  max-width: 2000px;
+  max-width: 1200px;
   margin: var(--spacing-2xl) auto var(--spacing-xl);
   padding: 0 2rem;
   display: grid;
   gap: var(--spacing-lg);
 }
 
-/* Content Boxes */
+/* Content Boxes - Light & Elegant */
 .content-box {
-  background: linear-gradient(135deg, rgba(5, 20, 40, 0.5) 0%, rgba(10, 30, 50, 0.4) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: var(--spacing-lg);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: var(--glass-shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -393,38 +401,37 @@ body,
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+  opacity: 0.4;
 }
 
 .content-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
-  background: linear-gradient(135deg, rgba(5, 20, 40, 0.55) 0%, rgba(10, 30, 50, 0.45) 100%);
+  box-shadow: var(--glass-shadow-hover);
+  border-color: var(--border-accent);
+  background: var(--glass-bg-hover);
 }
 
 .content-box-summary {
-  border-left: 4px solid var(--mck-accent);
+  border-left: 3px solid var(--mck-accent);
 }
 
 .content-box-summary::before {
-  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.4), transparent);
-  opacity: 0.6;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.3), transparent);
 }
 
 .content-box-focus {
-  border-left: 4px solid rgba(0, 102, 204, 0.5);
+  border-left: 3px solid rgba(0, 102, 204, 0.4);
 }
 
 .content-box-focus::before {
-  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.3), transparent);
-  opacity: 0.5;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.25), transparent);
 }
 
 .content-box h2 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text-primary);
@@ -441,46 +448,46 @@ body,
   margin-bottom: var(--spacing-md);
 }
 
-/* Competencies Grid */
+/* Competencies Grid - Cleaner */
 .competencies {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
 
 .competency-item {
   padding: var(--spacing-md);
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid var(--border-secondary);
   transition: all 0.2s ease;
 }
 
 .competency-item:hover {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-primary);
+  transform: translateY(-1px);
 }
 
 .competency-item strong {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.85rem;
 }
 
 .competency-item p {
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text-secondary);
   margin: 0;
 }
 
-/* Focus Items */
+/* Focus Items - Refined */
 .focus-items {
   display: grid;
   gap: var(--spacing-md);
@@ -489,20 +496,20 @@ body,
 
 .focus-item {
   padding: var(--spacing-md);
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  border-left: 3px solid var(--mck-accent);
+  background: rgba(0, 102, 204, 0.03);
+  border-radius: 10px;
+  border-left: 2px solid var(--mck-accent);
   transition: all 0.2s ease;
 }
 
 .focus-item:hover {
-  background: rgba(0, 0, 0, 0.35);
-  transform: translateX(4px);
+  background: rgba(0, 102, 204, 0.06);
+  transform: translateX(2px);
   border-left-color: var(--mck-accent-light);
 }
 
 .focus-item h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0 0 var(--spacing-xs) 0;
@@ -516,17 +523,9 @@ body,
   margin: 0;
 }
 
-.page__content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
-}
-
-/* Typography in Content */
+/* =========================================================
+   Typography in Content
+   ========================================================= */
 .page__content p {
   font-size: 0.95rem;
   line-height: 1.75;
@@ -549,7 +548,7 @@ body,
 
 .page__content h2 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-top: var(--spacing-xl);
@@ -560,7 +559,7 @@ body,
 }
 
 .page__content h3 {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-sm);
@@ -568,7 +567,7 @@ body,
 }
 
 .page__content h4 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 600;
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-xs);
@@ -617,7 +616,7 @@ a:hover {
 
 /* Code Blocks */
 pre, code {
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   color: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid var(--border-primary);
   border-radius: 6px;
@@ -653,7 +652,7 @@ th, td {
 }
 
 th {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
   font-weight: 600;
   color: var(--text-primary);
   font-size: 0.95rem;
@@ -664,19 +663,19 @@ td {
 }
 
 tr:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid var(--mck-accent);
+  border-left: 3px solid var(--mck-accent);
   padding-left: var(--spacing-md);
   margin: var(--spacing-md) 0;
   color: var(--text-secondary);
   font-style: italic;
-  background: rgba(0, 102, 204, 0.05);
+  background: rgba(0, 102, 204, 0.03);
   padding: var(--spacing-md);
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* Horizontal Rules */
@@ -702,13 +701,14 @@ hr {
 
 .archive__item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--glass-shadow-hover);
   border-color: var(--border-accent);
+  background: var(--glass-bg-hover);
 }
 
 .archive__item-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
 }
