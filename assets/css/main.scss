@@ -188,45 +188,71 @@ hr, .page__content hr {
   border-color: rgba(255,255,255,0.12) !important;
 }
 
-/* ===============================
-   KILL THE WHITE CANVAS (REAL FIX)
-   =============================== */
+/* ============================================================
+   HARD OVERRIDE: paint the SAME gradient on the white canvases
+   Paste at the VERY END of assets/css/main.scss
+   ============================================================ */
 
-/* The actual white background layers */
-#main,
-.initial-content,
-.page,
-.page__inner-wrap,
-.page__content,
-.layout--single,
-.layout--home,
-.layout--archive {
-  background: inherit !important;
-  background-color: inherit !important;
-}
-
-/* Ensure body owns the only background */
-html, body {
-  background: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.14), transparent 55%),
-              radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.38), transparent 60%),
-              linear-gradient(180deg, #061525, #04101c) !important;
-  color: rgba(255,255,255,0.88) !important;
-  overflow-x: hidden;
-}
-
-/* Make ALL text white */
-#main *,
-.page__content *,
-.archive__item *,
-.sidebar * {
-  color: rgba(255,255,255,0.88) !important;
-}
-
-/* Kill blue links */
-a, a:visited {
-  color: rgba(255,255,255,0.92) !important;
-}
-a:hover {
-  color: #ffffff !important;
-  text-decoration: underline;
-}
+   :root {
+    --mck-canvas: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.14), transparent 55%),
+                  radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.38), transparent 60%),
+                  linear-gradient(180deg, #061525, #04101c);
+  }
+  
+  /* 1) True page background */
+  html, body {
+    background: var(--mck-canvas) !important;
+    color: rgba(255,255,255,0.90) !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* 2) These are the usual “white canvases” in Minimal Mistakes.
+        Instead of trying to remove them, paint them with the same canvas. */
+  .initial-content,
+  #main,
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .archive,
+  .archive__inner-wrap,
+  .layout--single,
+  .layout--home,
+  .layout--archive {
+    background: var(--mck-canvas) !important;
+    background-attachment: fixed !important; /* makes it look like ONE continuous background */
+  }
+  
+  /* 3) Make all text white (including Executive Summary section) */
+  .page__content,
+  .page__content * ,
+  .archive__item,
+  .archive__item *,
+  .sidebar,
+  .sidebar * {
+    color: rgba(255,255,255,0.86) !important;
+  }
+  
+  /* headings stronger white */
+  .page__content h1, .page__content h2, .page__content h3,
+  .page__content h4, .page__content h5, .page__content h6,
+  .page__title, .archive__item-title {
+    color: rgba(255,255,255,0.96) !important;
+  }
+  
+  /* 4) Links: no blue */
+  a, a:visited {
+    color: rgba(255,255,255,0.92) !important;
+  }
+  a:hover, a:focus {
+    color: #ffffff !important;
+    text-decoration: underline;
+  }
+  
+  /* 5) Optional: make KPI cards “glass” instead of white (fits your request better) */
+  .mck-kpi {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+  }
+  .mck-kpi .v { color: rgba(255,255,255,0.96) !important; }
+  .mck-kpi .l { color: rgba(255,255,255,0.78) !important; }
+  
