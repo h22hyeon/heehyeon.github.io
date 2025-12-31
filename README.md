@@ -32,6 +32,10 @@ heehyeon.github.io/
 
 ## 커스터마이징
 
+### 프로필 사진 추가
+
+`assets/` 폴더에 `profile.jpg` 파일을 추가하세요. 권장 크기는 400x400px 이상의 정사각형 이미지입니다.
+
 ### 블로그 포스트 추가
 
 `js/main.js` 파일의 `blogPosts` 배열에 새로운 포스트를 추가하세요:
