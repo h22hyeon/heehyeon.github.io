@@ -3,281 +3,60 @@
 
 @charset "utf-8";
 
-/* Minimal Mistakes recommends importing the skin before the theme */
+/* Minimal Mistakes base */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
 /* =========================
-   McKinsey-inspired layer
+   GLOBAL McKINSEY CANVAS
    ========================= */
 
-:root{
-  --ink: #0b0f14;
-  --muted: #667085;
-  --line: rgba(255,255,255,0.12);
-  --wash: #f6f7f9;
+/* 1) EXACT background you want */
+html, body {
+  background: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.14), transparent 55%),
+              radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.38), transparent 60%),
+              linear-gradient(180deg, #061525, #04101c) !important;
 
-  --navy-0: #071a2b;
-  --navy-1: #061525;
-  --navy-2: #0a2a66;
-
-  --card: rgba(255,255,255,0.06);
-  --card-border: rgba(255,255,255,0.14);
-  --card-hover: rgba(255,255,255,0.10);
-  --accent: #67b7ff;
+  color: rgba(255,255,255,0.88) !important;
+  overflow-x: hidden;
 }
 
-html { font-size: 16px; }
-
-body{
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  letter-spacing: 0.1px;
-}
-
-/* ----- Masthead (top bar) ----- */
-.masthead{
-  background: linear-gradient(180deg, var(--navy-0), var(--navy-1));
-  border-bottom: 1px solid var(--line);
-}
-
-.greedy-nav{ background: transparent; }
-
-.greedy-nav a{
-  color: rgba(255,255,255,0.86);
-  font-weight: 600;
-}
-
-.greedy-nav a:hover{
-  color: #fff;
-  text-decoration: none;
-}
-
-.site-title, .site-title:visited{ color: rgba(255,255,255,0.92); }
-
-.masthead__menu-item a{ color: rgba(255,255,255,0.82); }
-.masthead__menu-item a:hover{ color: #fff; }
-
-/* ----- Home hero (base look) ----- */
-.mck-hero{
-  background: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.15), transparent 55%),
-              radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.35), transparent 60%),
-              linear-gradient(180deg, var(--navy-1), #04101c);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  padding: 3.2rem 0 2.6rem 0;
-  margin-top: -1.2rem;
-}
-
-/* ---- FORCE FULL-BLEED (this fixes the white gutters) ----
-   This pattern is robust inside constrained containers. */
-.page__content .mck-hero{
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-
-  width: 100vw !important;
-  max-width: none !important;
-
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-}
-
-/* Prevent horizontal scrollbar from 100vw including scrollbar width */
-html, body { overflow-x: hidden; }
-
-.mck-wrap{
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 1.1rem;
-}
-
-.mck-grid{
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.2rem;
-  align-items: stretch;
-}
-
-.mck-kicker{
-  color: rgba(255,255,255,0.72);
-  font-size: 0.95rem;
-  margin: 0 0 0.65rem 0;
-}
-
-.mck-title{
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  color: #fff;
-  font-size: 3.1rem;
-  line-height: 1.05;
-  margin: 0 0 0.9rem 0;
-}
-
-.mck-sub{
-  color: rgba(255,255,255,0.78);
-  font-size: 1.05rem;
-  line-height: 1.75;
-  margin: 0 0 1.35rem 0;
-  max-width: 48rem;
-}
-
-.mck-cta{
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(255,255,255,0.06);
-  padding: 0.7rem 0.9rem;
-  border-radius: 999px;
-}
-
-.mck-cta:hover{
-  background: rgba(255,255,255,0.10);
-  text-decoration: none;
-}
-
-.mck-card{
-  border: 1px solid var(--card-border);
-  background: var(--card);
-  border-radius: 16px;
-  padding: 1.1rem;
-  height: 100%;
-}
-
-.mck-card:hover{ background: var(--card-hover); }
-
-.mck-card-label{
-  color: rgba(255,255,255,0.62);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 0.35rem 0;
-}
-
-.mck-card-title{
-  color: #fff;
-  font-size: 1.35rem;
-  line-height: 1.2;
-  margin: 0 0 0.8rem 0;
-}
-
-.mck-card-meta{
-  color: rgba(255,255,255,0.72);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0 0 1.0rem 0;
-}
-
-.mck-card-link{
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.mck-card-link:hover{ text-decoration: underline; }
-
-/* ----- KPI row under hero ----- */
-.mck-kpis{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin: -1.4rem auto 1.6rem auto;
-  max-width: 1180px;
-  padding: 0 1.1rem;
-}
-
-.mck-kpi{
-  border: 1px solid rgba(17,24,39,0.08);
-  background: #fff;
-  border-radius: 14px;
-  padding: 0.95rem 1.05rem;
-}
-
-.mck-kpi .v{
-  font-size: 1.35rem;
-  font-weight: 750;
-  margin: 0;
-  color: var(--ink);
-}
-
-.mck-kpi .l{
-  margin: 0.25rem 0 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-/* ----- Content typography tweaks ----- */
-.page__content a{ color: #0a2a66; }
-.page__content a:hover{ text-decoration: underline; }
-
-.page__footer{
-  border-top: 1px solid rgba(17,24,39,0.08);
-  background: #fff;
-}
-
-/* Responsive */
-@media (max-width: 980px){
-  .mck-grid{ grid-template-columns: 1fr; }
-  .mck-title{ font-size: 2.35rem; }
-  .mck-kpis{ grid-template-columns: 1fr; }
-}
-
-/* =========================
-   Site-wide dark “McKinsey” mode
-   (applies to ALL pages)
-   ========================= */
-
-/* 1) Global background */
-body {
-  background: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.12), transparent 55%),
-              radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.28), transparent 60%),
-              linear-gradient(180deg, var(--navy-1), #04101c) !important;
-  color: rgba(255,255,255,0.86) !important;
-}
-
-/* 2) Remove white “panels” from theme wrappers */
+/* 2) KILL ALL WHITE PANELS (this is the key) */
+body *,
 .initial-content,
 .page,
 .page__inner-wrap,
+.page__content,
 .archive,
 .archive__item,
 .sidebar,
-.page__content,
+.layout--single,
+.layout--home,
+.layout--archive,
+#main,
+#page,
+#content,
 .page__footer {
-  background: transparent !important;
+  background-color: transparent !important;
 }
 
-/* 3) Typography: make ALL body text white-ish */
-.page__content,
-.archive__item-excerpt,
-.page__meta,
-.taxonomy__index,
-.taxonomy__section,
-.notice,
-.notice--primary,
-.notice--info,
-.notice--warning,
-.notice--success {
-  color: rgba(255,255,255,0.84) !important;
+/* 3) Typography — EVERYTHING white */
+p, li, span, div {
+  color: rgba(255,255,255,0.86);
 }
 
 /* Headings */
-.page__content h1,
-.page__content h2,
-.page__content h3,
-.page__content h4,
-.page__content h5,
-.page__content h6,
-.archive__item-title,
-.page__title {
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
   color: rgba(255,255,255,0.96) !important;
 }
 
-/* 4) Links: make “blue links” white */
+/* 4) Links — NO BLUE ANYWHERE */
 a,
 a:visited {
-  color: rgba(255,255,255,0.88) !important;
+  color: rgba(255,255,255,0.90) !important;
+  text-decoration: none;
 }
 
 a:hover,
@@ -286,55 +65,44 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Optional: if you still want a subtle accent on hover only */
-/*
-a:hover, a:focus { color: var(--accent) !important; }
-*/
-
-/* 5) Lines / separators / cards to match dark background */
-hr,
-.page__content hr {
-  border-color: rgba(255,255,255,0.12) !important;
+/* 5) Masthead (top bar) */
+.masthead {
+  background: linear-gradient(180deg, #071a2b, #061525) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.page__content p,
-.page__content li {
-  color: rgba(255,255,255,0.84) !important;
+.greedy-nav {
+  background: transparent !important;
 }
 
-/* Tables */
-.page__content table,
-.page__content th,
-.page__content td {
+.greedy-nav a {
+  color: rgba(255,255,255,0.88) !important;
+  font-weight: 600;
+}
+
+/* 6) Horizontal rules / separators */
+hr {
   border-color: rgba(255,255,255,0.14) !important;
 }
 
-.page__content th {
+/* 7) Code blocks */
+pre, code {
+  background: rgba(0,0,0,0.35) !important;
+  color: rgba(255,255,255,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* 8) Tables */
+table, th, td {
+  border-color: rgba(255,255,255,0.18) !important;
+}
+
+th {
   background: rgba(255,255,255,0.06) !important;
 }
 
-/* Code blocks */
-.page__content code {
-  color: rgba(255,255,255,0.90) !important;
-  background: rgba(255,255,255,0.08) !important;
-}
-
-.page__content pre,
-.highlighter-rouge .highlight {
-  background: rgba(0,0,0,0.28) !important;
-  border: 1px solid rgba(255,255,255,0.10) !important;
-}
-
-/* 6) Footer: dark */
+/* 9) Footer */
 .page__footer {
   border-top: 1px solid rgba(255,255,255,0.12) !important;
   color: rgba(255,255,255,0.70) !important;
 }
-
-.page__footer a,
-.page__footer a:visited {
-  color: rgba(255,255,255,0.80) !important;
-}
-
-/* Prevent horizontal scrollbars */
-html, body { overflow-x: hidden; }
