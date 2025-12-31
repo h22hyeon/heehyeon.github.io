@@ -1,0 +1,14 @@
+# GitHub Pages Jekyll 설정 (선택사항)
+# Jekyll을 사용하지 않더라도 이 파일이 있으면 도움이 될 수 있습니다
+
+title: Heehyeon - PhD in ML
+description: PhD in Machine Learning - Research and Blog
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# GitHub Pages 설정
+github: [metadata]
+repository: h22hyeon/heehyeon.github.io
+
