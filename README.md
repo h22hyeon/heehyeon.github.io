@@ -1,250 +1,116 @@
 <p align="center">
-    <a href="CONTRIBUTING.md#pull-requests">
-        <img src="https://img.shields.io/badge/PRs-welcome-0?style=flat-square&labelColor=202b2d&color=087e96" alt="PRs welcome"></a>
-    <a href="https://github.com/welpo/tabi/graphs/contributors">
-        <img src="https://img.shields.io/github/contributors/welpo/tabi?style=flat-square&labelColor=202b2d&color=087e96" alt="Contributors"></a>
-    <a href="https://github.com/welpo/tabi/forks">
-        <img src="https://img.shields.io/github/forks/welpo/tabi?style=flat-square&labelColor=202b2d&color=087e96" alt="Forks"></a>
-    <a href="https://github.com/welpo/tabi/commits/main/">
-        <img src="https://img.shields.io/github/last-commit/welpo/tabi?style=flat-square&labelColor=202b2d&color=087e96" alt="Last commit"></a>
-    <br>
-    <a href="https://github.com/welpo/tabi/releases">
-        <img src="https://img.shields.io/github/v/release/welpo/tabi?style=flat-square&labelColor=202b2d&color=087e96" alt="Latest release"></a>
+    <a href="https://www.getzola.org/">
+        <img src="https://img.shields.io/badge/powered_by-Zola-brightgreen?style=flat-square&labelColor=202b2d&color=087e96" alt="Built with Zola"></a>
+    <a href="https://github.com/welpo/tabi">
+        <img src="https://img.shields.io/badge/theme-tabi-0?style=flat-square&labelColor=202b2d&color=087e96" alt="tabi theme"></a>
     <a href="https://welpo.github.io/tabi/blog/mastering-tabi-settings/">
-        <img src="https://img.shields.io/website?url=https%3A%2F%2Fwelpo.github.io%2Ftabi&style=flat-square&label=docs&labelColor=202b2d" alt="Documentation"></a>
-    <a href="https://github.com/welpo/tabi/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/welpo/tabi?style=flat-square&labelColor=202b2d&color=087e96" alt="License"></a>
-    <a href="https://github.com/welpo/git-sumi">
-        <img src="https://img.shields.io/badge/clean_commits-git--sumi-0?style=flat-square&labelColor=202b2d&color=087e96" alt="Clean commits"></a>
-    <a href="https://isitmaintained.com/project/welpo/tabi">
-        <img src="https://isitmaintained.com/badge/resolution/welpo/tabi.svg" alt="Average time to resolve an issue"></a>
-    <a href="https://isitmaintained.com/project/welpo/tabi">
-        <img src="https://isitmaintained.com/badge/open/welpo/tabi.svg" alt="Percentage of issues still open"></a>
+        <img src="https://img.shields.io/badge/docs-here-0?style=flat-square&labelColor=202b2d&color=087e96" alt="Documentation"></a>
 </p>
 
-# 🌱 tabi
+# tabi start
 
-An accessible [Zola](https://www.getzola.org) theme with [search](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#search), [multi-language support](https://welpo.github.io/tabi/blog/faq-languages/), [optional JavaScript](https://welpo.github.io/tabi/blog/javascript/), a perfect Lighthouse score, and [comprehensive documentation](https://welpo.github.io/tabi). Crafted for personal websites and blogs.
+Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https://github.com/welpo/tabi).
+
+![Screenshot of tabi theme](https://cdn.jsdelivr.net/gh/welpo/tabi@main/light_dark_screenshot.png)
+
+## Quick start
+
+1. On the top right of this page, click "Use this template" → "Create a new repository"
+2. Replace placeholders in `content/_index.md` and in the first four lines of `config.toml`
+3. Save your profile photo to `static/img/profile.webp` (or change the path to your image in `content/_index.md`)
+4. Start writing in `content/blog/`. See `content/blog/hello.md` for an example
+
+**Note**: an error like `Tried to build search index for language ko which is not supported`, means Zola does not support search for that language. To disable search, set `build_search_index = false` in `config.toml`
 
 > [!TIP]
-> Want to start blogging right away? Use the [tabi-start template](https://github.com/welpo/tabi-start) to get a complete site up and running in minutes.
+> Take a look through `config.toml` to customise further (set up [social links](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-icons), your [email](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#encoded-email)…). The [Mastering tabi Settings](https://welpo.github.io/tabi/blog/mastering-tabi-settings/) guide has more details.
 
-See a live preview (and the theme's documentation) [here](https://welpo.github.io/tabi).
+## File structure
 
-Explore the [Sites Using tabi section](#sites-using-tabi) to see real-world applications.
-
-> tabi (旅, /<span title="/t/: 't' in 'sty'">t</span><span title="/ɐ/: a sound between 'a' in 'sofa' and 'u' in 'nut'">ɐ</span><span title="/ˈ/: primary stress mark, indicating that the following syllable is pronounced with greater emphasis">ˈ</span><span title="/b/: 'b' in 'cab'">b</span><span title="/i/: 'i' in 'fleece'">i</span>/): Journey.
-
-![tabi](https://github.com/welpo/tabi/raw/main/light_dark_screenshot.png)
-
-tabi has a perfect score on Google's Lighthouse audit:
-
-![lighthouse](https://raw.githubusercontent.com/welpo/tabi/main/lighthouse_score.png)
-
-## Features
-
-- [X] [Set any language as default](https://welpo.github.io/tabi/blog/faq-languages/#how-do-i-set-a-default-language-for-my-site). Set your base site to Chinese, Spanish, French, Hindi… or any [other supported language](/i18n). The theme's interface will be translated accordingly.
-- [X] [Integration with remote repositories](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#git-repository-integration) on GitHub, GitLab, Gitea & Codeberg for commit history and showing the site source.
-- [X] [Series support](https://welpo.github.io/tabi/blog/series/) for creating sequential content like tutorials, courses, and multi-part stories.
-- [X] Dark and light themes. Defaults to the OS setting, with a switcher in the navigation bar.
-- [X] Thorough documentation. See [Mastering tabi Settings: A Comprehensive Guide](https://welpo.github.io/tabi/blog/mastering-tabi-settings/).
-- [X] Perfect Lighthouse score (Performance, Accessibility, Best Practices and SEO).
-- [X] [Comprehensive multi-language support](https://welpo.github.io/tabi/blog/faq-languages/#how-does-tabi-handle-multilingual-support). Add as many languages as you wish.
-- [X] Support for [comments using giscus, utterances, Hyvor Talk, or Isso](https://welpo.github.io/tabi/blog/comments/).
-- [X] [Indieweb](https://indieweb.org/) ready with microformats, [hcard](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#representative-h-card) and [webmentions](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#webmentions) support.
-- [X] Code syntax highlighting with colours based on [Catppuccin](https://github.com/catppuccin/catppuccin) Frappé.
-- [X] [Mermaid support](https://welpo.github.io/tabi/blog/shortcodes/#mermaid-diagrams) to create diagrams and charts with text.
-- [X] [Local search](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#search) with an accessible, multi-lingual interface.
-- [X] [Custom Twitter card](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-cards) and automatic Open Graph tags.
-- [X] Anonymous [like buttons](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#iine) powered by [iine](https://iine.to).
-- [X] [KaTeX](https://katex.org/) support for mathematical notation.
-- [X] [Stylized and human readable Atom feed](https://welpo.github.io/tabi/atom.xml).
-- [X] [Stylized and human readable sitemap](https://welpo.github.io/tabi/sitemap.xml).
-- [X] [Mail encoding](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#encoded-email) for spam protection.
-- [X] All JavaScript can be [fully disabled](https://welpo.github.io/tabi/blog/javascript/).
-- [X] [Customizable Table of Contents](https://welpo.github.io/tabi/blog/toc/).
-- [X] [Customizable secure headers](https://welpo.github.io/tabi/blog/security/).
-- [X] [Copy button for code blocks](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#copy-button-on-code-blocks).
-- [X] [Quick navigation buttons](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#quick-navigation-buttons).
-- [X] [Custom copyright notice](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#copyright).
-- [X] [Custom canonical URLs](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#canonical-url).
-- [X] [Custom shortcodes](https://welpo.github.io/tabi/blog/shortcodes/).
-- [X] [Customizable skins](https://welpo.github.io/tabi/blog/customise-tabi/).
-- [X] [Social media cards](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-cards).
-- [X] Responsive design.
-- [X] [Projects page](https://welpo.github.io/tabi/projects/).
-- [X] [Archive page](https://welpo.github.io/tabi/archive/).
-- [X] [Pinned posts](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#pinning-posts).
-- [X] [Social links](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-icons).
-- [X] [Tags](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#tags).
-
-## Installation
-
-> [!NOTE]
-> The fastest way to create a new site is to use the [tabi-start template](https://github.com/welpo/tabi-start). This gives you a complete blog setup with all the essential configuration ready to go.
-
-### Manual installation
-
-To add tabi to you existing Zola site:
-
-0. Initialize a Git repository in your project directory (if you haven't already):
-
-```
-git init
+```tree
+├── config.toml              # Site configuration
+├── content/
+│   ├── _index.md            # Home page
+│   ├── archive/             # Archive page
+│   │   └── _index.md        # Archive page section
+│   ├── blog/                # Blog posts
+│   │   ├── hello.md         # Sample post
+│   │   └── _index.md        # Blog section configuration
+│   └── projects/            # Projects page
+│       ├── cool_project.md  # Sample project
+│       └── _index.md        # Projects section configuration
+│── static/
+│   └── img/
+│       └── profile.webp     # Profile photo for home page
+└── themes/
+    └── tabi/                # tabi theme
 ```
 
-1. Add the theme as a git submodule:
+## Local development
 
-```
-git submodule add https://github.com/welpo/tabi.git themes/tabi
-```
+1. [Install Zola](https://www.getzola.org/documentation/getting-started/installation/)
+2. Clone your repository
+3. Run `git submodule update --init --recursive`
+4. Run `zola serve`
+5. Visit http://127.0.0.1:1111. You should see [this](https://tabi-start.pages.dev/).
 
-Or clone the theme into your themes directory:
+## Deployment
 
-```
-git clone https://github.com/welpo/tabi.git themes/tabi
-```
+Refer to the [Zola documentation](https://www.getzola.org/documentation/deployment/overview/):
 
-### Required configuration
+- [AWS S3 Bucket](https://www.getzola.org/documentation/deployment/aws-s3/)
+- [Cloudflare Pages](https://www.getzola.org/documentation/deployment/cloudflare-pages/)
+- [Codeberg Pages](https://www.getzola.org/documentation/deployment/codeberg-pages/)
+- [Docker image](https://www.getzola.org/documentation/deployment/docker-image/)
+- [Edgio](https://www.getzola.org/documentation/deployment/edgio/)
+- [Fly.io](https://www.getzola.org/documentation/deployment/flyio/)
+- [GitHub Pages](https://www.getzola.org/documentation/deployment/github-pages/)
+- [GitLab Pages](https://www.getzola.org/documentation/deployment/gitlab-pages/)
+- [Netlify](https://www.getzola.org/documentation/deployment/netlify/)
+- [Sourcehut Pages](https://www.getzola.org/documentation/deployment/sourcehut/)
+- [Vercel](https://www.getzola.org/documentation/deployment/vercel/)
+- [Zeabur](https://www.getzola.org/documentation/deployment/zeabur/)
 
-2. Enable the theme in your `config.toml`:
+## Updating tabi
 
-```
-theme = "tabi"
-```
+### Automated updates
 
-3. Set a `title` in your `config.toml`:
+This template includes a [GitHub Action workflow](https://github.com/welpo/tabi-start/blob/main/.github/workflows/update-tabi.yml) that checks for tabi theme updates weekly and creates a PR when updates are available.
 
-```
-title = "Your Site Title"
-```
+#### Setting up permissions
 
-4. Configure code block highlighting in your `config.toml`:
+The automated updates require proper GitHub Actions permissions:
 
-```toml
-[markdown]
-highlight_code = true
-highlight_theme = "css"
-```
+1. Go to your repository's Settings → Actions → General
+2. Scroll down to "Workflow permissions"
+3. Enable "Allow GitHub Actions to create and approve pull requests"
+4. Save changes
 
-5. Create a `content/_index.md` file. This file controls how your home page looks and behaves. Choose one of the following options:
+<details>
+<summary>How automated updates work (click to read)</summary>
 
-   **Option A: Serve posts from `/`**:
+- Every Monday at midnight (UTC), the workflow checks for new tabi versions
+- If an update is found, it creates a PR with:
+  - Detailed changelog
+  - Links to relevant commits and PRs
+  - The exact changes being made
+- It runs the Test build workflow. If the build fails, you'll receive an email notification. **Verify the site works locally before merging the PR**
+- You can review and merge these updates at your convenience
 
-   ```
-   +++
-   title = "Home"
-   paginate_by = 5  # Show 5 posts per page.
-   +++
-   ```
+</details>
 
-   - This will display posts in `content/` with pagination.
-
-   **Option B: Serve posts from a different path (e.g., `blog/`)**:
-
-   ```
-   +++
-   title = "Home"
-   # Note we're not setting `paginate_by` here.
-
-   [extra]
-   section_path = "blog/_index.md"  # Where to find your posts.
-   max_posts = 5  # Show 5 posts on the home page.
-   +++
-   ```
-
-    - This will display the latest 5 posts from the `blog/` section.
-    - Do not set `paginate_by` if you choose this option.
-    - Use the full path to the section's `_index.md` file. Using `section_path = "blog/"` will not work.
-
-> [!WARNING]
-> Do not set both `paginate_by` and `section_path` in `content/_index.md`.
->
-> These settings are mutually exclusive and using both may result in no posts being displayed.
-
-6. If you want an introduction section (see screenshot above), add these lines to `content/_index.md`:
-
-```
-[extra]
-header = {title = "Hello! I'm tabi~", img = "img/main.webp", img_alt = "Your Name" }
-```
-
-The content outside the front matter will be rendered between the header title and the posts listing. In the screenshot above, it's the text that reads "tabi is a fast, lightweight, and modern Zola theme…".
-
-7. If you want a multilingual site, you will need to set up each language. In `config.toml`, set the title and taxonomies for each language, like:
-
-```toml
-[languages.es]
-title = "~/tabi"
-taxonomies = [{name = "tags", feed = true}]
-```
-
-You will need an `_index.{language_code}.md` per language for each section (e.g. /blog or /projects) that you want to enable in that language.
-
-The same is true for individual posts, which should have the exact same name as the default language, with an extra `.{code}` before the extension (e.g. the Spanish version of `security.md` would be `security.es.md`).
-
-This configuration allows the language switcher to take the user to the translation of the current URL. If a translation doesn't exist, the 404 page will be displayed, with an explanation in each language set in the config.
-
-To learn more about multilingual support, see the [Frequently Asked Questions](https://welpo.github.io/tabi/blog/faq-languages/).
-
-### Updating tabi
-
-If you added the theme as a git submodule, run:
+### Manual updates
 
 ```bash
 git submodule update --remote themes/tabi
 ```
 
-If you cloned it:
-
-```bash
-cd themes/tabi
-git pull
-```
-
-## Sites using tabi
-
-| Website | Creator | Description  | Site Source   |
-| - | - | - | - |
-| [osc.garden](https://osc.garden) | Óscar Fernández ([welpo](https://github.com/welpo)) | Data science, psychology, and Zola | [Source](https://github.com/welpo/osc.garden) |
-| [seadve.github.io](https://seadve.github.io/) | Dave Patrick Caberto ([SeaDve](https://github.com/SeaDve/)) | Personal blog and portfolio with custom CSS | [Source](https://github.com/SeaDve/seadve.github.io) |
-| [mikufan.page](https://mikufan.page) | [Nadia](https://github.com/nyadiia) | Personal blog | [Source](https://github.com/nyadiia/mikufan.page) |
-| [tim-boettcher.online](https://tim-boettcher.online/) | [Tim Böttcher](https://codeberg.org/Tim-Boettcher/) | Insights and ramblings of a deafblind programmer | [Source](https://codeberg.org/Tim-Boettcher/tim-boettcher-online/) |
-| [www.richtman.au](https://www.richtman.au) | [Ariel Richtman](https://github.com/arichtman) | Personal tech blog | [Source](https://github.com/arichtman/www.richtman.au) |
-| [Ponderosa Games](https://ponderosagames.com/) | John Burak ([JVimes](https://github.com/jvimes)) | A friendly indie game company | &mdash; |
-| [jmbhughes.com](https://jmbhughes.com/) | Marcus Hughes ([jmbhughes](https://github.com/jmbhughes)) | Personal blog | [Source](https://github.com/jmbhughes/jmbhughes.github.io) |
-| [szabolcs.me](https://szabolcs.me) | Szabolcs Fazekas ([szabolcsf](https://github.com/szabolcsf)) | Personal blog | [Source](https://github.com/szabolcsf/szabolcs.me) |
-| [Nizzlay](https://nizzlay.com) | Niels Gouman ([Nizzlay](https://github.com/Nizzlay)) | Personal blog | [Source](https://github.com/Nizzlay/nizzlay.com) |
-| [ZzMzaw's blog](https://zzmzaw.github.io/) | ZzMzaw ([ZzMzaw](https://github.com/ZzMzaw)) | Personal blog | [Source](https://github.com/ZzMzaw/zzmzaw.github.io) |
-| [idle-ti.me](https://idle-ti.me/) | Jérôme Ramette ([be-next](https://github.com/be-next)) | Personal blog | [Source](https://github.com/be-next/idle-ti.me) |
-| [tzinm.me](https://tzinm.me/) | [Tzinm](https://github.com/tzinm) | Personal blog | [Source](https://codeberg.org/tzinm/blog) |
-| [b1n.io](https://b1n.io) | [b1nhack](https://github.com/b1nhack) | Linux kernel vulnerability researcher | [Source](https://github.com/b1nhack/blog) |
-| [posixlycorrect.com](https://posixlycorrect.com/) | [Fabian Montero](https://git.posixlycorrect.com/fabian) | Personal homepage | [Source](https://git.posixlycorrect.com/fabian/homepage) |
-
-Using tabi? Feel free to create a PR and add your site to this list.
-
-## Inspiration
-
-This theme was inspired by:
-
-- [shadharon](https://github.com/syedzayyan/shadharon) — tabi started as a fork of [syedzayyan](https://github.com/syedzayyan)'s theme
-- [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
-- [abridge](https://github.com/Jieiku/abridge)
-
 ## Support
 
-Something not working? Have an idea? Let us know!
+- [tabi documentation](https://welpo.github.io/tabi/)
+- [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/)
 
-- Questions? → [Start a discussion](https://github.com/welpo/tabi/discussions)
-- Found a bug? → [Report it here](https://github.com/welpo/tabi/issues/new?&labels=bug&template=2_bug_report.yml)
-- Feature request? → [Tell us more!](https://github.com/welpo/tabi/issues/new?&labels=feature&template=3_feature_request.yml)
-
-## Contributing
-
-Please do! We appreciate bug reports, improvements to translations or documentation (however minor), feature requests…
-
-Take a look at the [Contributing Guidelines](/CONTRIBUTING.md) to learn more.
-
-## License
-
-The code is available under the [MIT license](./LICENSE).
+> [!TIP]
+> How was your experience with this template?
+>
+> Share your thoughts in this [tabi discussion](https://github.com/welpo/tabi/discussions/440) or [report any issues](https://github.com/welpo/tabi/issues/new?&labels=bug&template=2_bug_report.yml) you find! Thank you 🙇🏼‍♂️
