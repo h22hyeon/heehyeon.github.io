@@ -3,21 +3,23 @@ title: "Publications"
 permalink: /publications/
 ---
 
-## Papers & Preprints
-Reverse-chronological list. Replace placeholders with your real entries.
+## Publications
+
+Selected papers and preprints, listed in reverse chronological order.
 
 {% assign items = site.publications | sort: "date" | reverse %}
 {% for pub in items %}
+
 ### [{{ pub.title }}]({{ pub.url }})
-{{ pub.authors }}  
-**Venue/Status:** {{ pub.venue }} · **Year:** {{ pub.year }}
+
+**Authors:** {{ pub.authors }}  
+**Venue:** {{ pub.venue }} · **Year:** {{ pub.year }}
 
 {% if pub.links %}
-**Links:**
+**Resources:**
 {% for l in pub.links %}
-- {{ l.label }}: {{ l.url }}
+- [{{ l.label }}]({{ l.url }})
 {% endfor %}
 {% endif %}
 
----
 {% endfor %}

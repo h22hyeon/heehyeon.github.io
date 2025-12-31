@@ -36,11 +36,21 @@ author_profile: false
 
 
 ## Executive Summary
-- **What I do:** structure-aware learning and evaluation for modern ML systems.
-- **How I work:** clear hypotheses → controlled experiments → reproducible artifacts.
-- **What you will find here:** selected research, publications, and links to code/resources.
+
+I design and evaluate structure-aware learning systems for modern machine learning applications. My approach centers on clear hypotheses, controlled experiments, and reproducible artifacts that advance both theoretical understanding and practical deployment.
+
+**Core competencies:**
+- **Research methodology:** hypothesis-driven experimentation with rigorous evaluation protocols
+- **Technical depth:** structural reasoning, interpretability, and robust measurement frameworks
+- **Practical impact:** reproducible artifacts, open-source tools, and benchmark contributions
 
 ## Current Focus
-- Safety and robustness evaluation for multimodal / generative systems
-- Explainability and faithful evidence for graph-based models
-- Benchmarking and measurement methodology (ablation-first)
+
+**Safety and robustness evaluation**  
+Developing measurement-first pipelines to stress-test multimodal and generative systems under adversarial conditions and distribution shifts.
+
+**Explainability and faithful evidence**  
+Building interpretable frameworks for graph-based models that provide traceable decision paths and verifiable evidence.
+
+**Benchmarking and measurement methodology**  
+Creating ablation-first evaluation protocols that isolate causal factors and enable reproducible research outcomes.
