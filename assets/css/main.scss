@@ -222,3 +222,119 @@ html, body { overflow-x: hidden; }
   .mck-title{ font-size: 2.35rem; }
   .mck-kpis{ grid-template-columns: 1fr; }
 }
+
+/* =========================
+   Site-wide dark “McKinsey” mode
+   (applies to ALL pages)
+   ========================= */
+
+/* 1) Global background */
+body {
+  background: radial-gradient(1200px 600px at 15% 30%, rgba(103,183,255,0.12), transparent 55%),
+              radial-gradient(900px 600px at 70% 35%, rgba(10,42,102,0.28), transparent 60%),
+              linear-gradient(180deg, var(--navy-1), #04101c) !important;
+  color: rgba(255,255,255,0.86) !important;
+}
+
+/* 2) Remove white “panels” from theme wrappers */
+.initial-content,
+.page,
+.page__inner-wrap,
+.archive,
+.archive__item,
+.sidebar,
+.page__content,
+.page__footer {
+  background: transparent !important;
+}
+
+/* 3) Typography: make ALL body text white-ish */
+.page__content,
+.archive__item-excerpt,
+.page__meta,
+.taxonomy__index,
+.taxonomy__section,
+.notice,
+.notice--primary,
+.notice--info,
+.notice--warning,
+.notice--success {
+  color: rgba(255,255,255,0.84) !important;
+}
+
+/* Headings */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6,
+.archive__item-title,
+.page__title {
+  color: rgba(255,255,255,0.96) !important;
+}
+
+/* 4) Links: make “blue links” white */
+a,
+a:visited {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+a:hover,
+a:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Optional: if you still want a subtle accent on hover only */
+/*
+a:hover, a:focus { color: var(--accent) !important; }
+*/
+
+/* 5) Lines / separators / cards to match dark background */
+hr,
+.page__content hr {
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+.page__content p,
+.page__content li {
+  color: rgba(255,255,255,0.84) !important;
+}
+
+/* Tables */
+.page__content table,
+.page__content th,
+.page__content td {
+  border-color: rgba(255,255,255,0.14) !important;
+}
+
+.page__content th {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* Code blocks */
+.page__content code {
+  color: rgba(255,255,255,0.90) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+.page__content pre,
+.highlighter-rouge .highlight {
+  background: rgba(0,0,0,0.28) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+/* 6) Footer: dark */
+.page__footer {
+  border-top: 1px solid rgba(255,255,255,0.12) !important;
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.page__footer a,
+.page__footer a:visited {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+/* Prevent horizontal scrollbars */
+html, body { overflow-x: hidden; }
