@@ -103,19 +103,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Abstract toggle functionality
     const abstractToggles = document.querySelectorAll('.pub-abstract-toggle');
     abstractToggles.forEach(toggle => {
+        const arrow = document.createElement('span');
+        arrow.textContent = '↓';
+        arrow.style.transition = 'transform 0.3s ease';
+        arrow.style.display = 'inline-block';
+        arrow.style.marginLeft = '0.5rem';
+        arrow.style.fontSize = '0.75rem';
+        toggle.appendChild(arrow);
+        
         toggle.addEventListener('click', function() {
             const abstractId = this.getAttribute('data-abstract-id');
             const abstract = document.getElementById(abstractId);
             
             if (abstract) {
                 const isActive = abstract.classList.contains('active');
+                const arrowSpan = this.querySelector('span');
                 
                 if (isActive) {
                     abstract.classList.remove('active');
-                    this.textContent = 'Click to view abstract';
+                    this.classList.remove('active');
+                    this.childNodes[0].textContent = 'View abstract';
+                    if (arrowSpan) arrowSpan.style.transform = 'rotate(0deg)';
                 } else {
                     abstract.classList.add('active');
-                    this.textContent = 'Click to hide abstract';
+                    this.classList.add('active');
+                    this.childNodes[0].textContent = 'Hide abstract';
+                    if (arrowSpan) arrowSpan.style.transform = 'rotate(180deg)';
                 }
             }
         });
