@@ -395,6 +395,7 @@ a {
     margin-bottom: var(--spacing-md);
     font-weight: 300;
     line-height: 1.6;
+    white-space: nowrap;
 }
 
 p.lead a,
@@ -924,6 +925,10 @@ p.lead a:hover,
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
         text-align: center;
+    }
+
+    .lead {
+        white-space: normal;
     }
 
     .about-image {
