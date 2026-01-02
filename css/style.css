@@ -345,7 +345,7 @@ a {
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: 310px 1fr;
+    grid-template-columns: 400px 1fr;
     gap: var(--spacing-lg);
     align-items: start;
 }
