@@ -345,13 +345,13 @@ a {
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 310px 1fr;
     gap: var(--spacing-lg);
     align-items: start;
 }
 
 .about-image {
-    flex: 0 0 min(240px, 36vw);
+    position: relative;
 }
 
 .profile-img {
