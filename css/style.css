@@ -354,7 +354,7 @@ a {
 }
 
 #publications.section {
-    padding-top: calc(var(--spacing-sm) + 80px);
+    padding-top: calc(var(--spacing-xs) + 80px);
     padding-bottom: var(--spacing-md);
 }
 
@@ -363,7 +363,7 @@ a {
 }
 
 #cv.section {
-    padding-top: calc(var(--spacing-sm) + 80px);
+    padding-top: calc(var(--spacing-xs) + 80px);
 }
 
 .section-alt {
@@ -948,6 +948,9 @@ p.lead a:hover,
     border-radius: 0;
     border: none;
     padding-bottom: var(--spacing-lg);
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 .cv-item:last-child {
