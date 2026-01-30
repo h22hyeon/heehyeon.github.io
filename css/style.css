@@ -907,15 +907,12 @@ p.lead a:hover,
 
 .cv-download {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-lg);
-    background: var(--background-alt);
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-xl);
+    padding: 0;
 }
 
 .cv-description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
     font-weight: 300;
@@ -937,30 +934,29 @@ p.lead a:hover,
 
 .cv-preview {
     display: grid;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
 }
 
 .cv-item {
-    background: var(--background-alt);
-    padding: var(--spacing-md);
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
+    padding: 0;
 }
 
 .cv-item h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: var(--spacing-md);
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.01em;
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cv-entry {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0;
 }
 
-.cv-entry:last-child {
-    margin-bottom: 0;
+.cv-entry > .cv-entry-header:not(:first-child) {
+    margin-top: var(--spacing-md);
 }
 
 .cv-entry-header {
