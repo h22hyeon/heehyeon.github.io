@@ -342,8 +342,8 @@ a {
 }
 
 #about.section {
-    padding-top: calc(var(--spacing-lg) + 80px);
-    padding-bottom: var(--spacing-lg);
+    padding-top: calc(var(--spacing-md) + 80px);
+    padding-bottom: var(--spacing-md);
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -355,7 +355,8 @@ a {
 }
 
 #publications.section {
-    padding-top: calc(var(--spacing-lg) + 80px);
+    padding-top: calc(var(--spacing-md) + 80px);
+    padding-bottom: var(--spacing-md);
 }
 
 .section-alt {
