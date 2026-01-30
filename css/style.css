@@ -541,7 +541,16 @@ p.lead a:hover,
 
 .skills {
     margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-hobby {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-sm);
     margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 .skills h3 {
