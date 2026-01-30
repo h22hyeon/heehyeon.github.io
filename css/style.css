@@ -354,7 +354,7 @@ a {
 }
 
 #publications.section {
-    padding-top: calc(var(--spacing-xs) + 80px);
+    padding-top: calc(80px + var(--spacing-xs) / 2);
     padding-bottom: var(--spacing-md);
 }
 
@@ -363,7 +363,7 @@ a {
 }
 
 #cv.section {
-    padding-top: calc(var(--spacing-xs) + 80px);
+    padding-top: calc(80px + var(--spacing-xs) / 2);
 }
 
 .section-alt {
