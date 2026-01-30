@@ -645,6 +645,42 @@ p.lead a:hover,
     border-bottom: none;
 }
 
+/* Dishes Gallery */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.dish-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background: var(--background-alt);
+    transition: var(--transition);
+    aspect-ratio: 1;
+}
+
+.dish-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: var(--text-secondary);
+}
+
+.dish-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.dish-item:hover img {
+    transform: scale(1.05);
+}
+
 .publication-item:hover {
     padding-left: var(--spacing-xs);
 }
@@ -1133,6 +1169,11 @@ p.lead a:hover,
 
     .btn-view-all {
         align-self: flex-end;
+    }
+
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-sm);
     }
 }
 
