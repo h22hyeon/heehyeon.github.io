@@ -338,18 +338,24 @@ a {
 
 /* Sections */
 .section {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
 }
 
 #about.section {
-    padding-top: calc(var(--spacing-xl) + 80px);
+    padding-top: calc(var(--spacing-lg) + 80px);
+    padding-bottom: var(--spacing-lg);
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
 }
 
+#research.section {
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+}
+
 #publications.section {
-    padding-top: calc(var(--spacing-xl) + 80px);
+    padding-top: calc(var(--spacing-lg) + 80px);
 }
 
 .section-alt {
@@ -363,8 +369,12 @@ a {
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     font-weight: 600;
+}
+
+#research .section-title {
+    margin-bottom: var(--spacing-sm);
 }
 
 .section-header {
@@ -457,6 +467,29 @@ a {
     position: relative;
 }
 
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-greeting {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.about-greeting .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientFlow 20s ease infinite;
+}
+
 .profile-img {
     width: 100%;
     height: auto;
@@ -539,7 +572,7 @@ p.lead a:hover,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
 }
 
 .research-card {
