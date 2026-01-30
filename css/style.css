@@ -366,6 +366,10 @@ a {
     padding-top: 80px;
 }
 
+#cv .section-title {
+    font-size: 1.5rem;
+}
+
 .section-alt {
     background: var(--background-alt);
 }
