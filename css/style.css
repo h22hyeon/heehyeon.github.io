@@ -342,8 +342,10 @@ a {
 }
 
 #about.section {
-    padding-top: calc(var(--spacing-md) + 80px);
-    padding-bottom: var(--spacing-md);
+    padding-top: calc(var(--spacing-sm) + 80px);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
 }
 
 #research.section {
