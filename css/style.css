@@ -373,8 +373,13 @@ a {
 
 .section-title {
     text-align: center;
+    margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-md);
     font-weight: 600;
+}
+
+.dishes-page .section-title {
+    margin-top: var(--spacing-lg);
 }
 
 #research .section-title {
